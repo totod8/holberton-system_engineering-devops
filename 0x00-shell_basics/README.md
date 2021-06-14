@@ -1,0 +1,1 @@
+#el comando pwd nos indica en que punto nos encontramos
