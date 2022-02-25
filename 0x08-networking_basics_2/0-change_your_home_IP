@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Modify /etc/hosts in a Docker container.
+# sed -i to edit files in-place instead of
+# printing to standard input
+cp /etc/hosts ~/hosts.new
+sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
+echo -e '8.8.8.8\tfacebook.com' >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
